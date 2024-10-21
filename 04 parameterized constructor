@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+
+class books{
+
+public:
+      string author;
+      int pages;
+      string title; 
+
+
+      string getTitle(){
+        return title;
+
+      }
+
+     void setTitle(string name){
+       title = name;
+     } 
+
+    void show(){
+      cout<<"Title: "<<title<<endl;
+      cout<< "Author: "<<author<<endl;
+      
+    }
+
+
+        
+ books() {   // as this constructor is self made and hence it is called normal constructor with no input parameters and no return type.
+    cout<<"Now this constructor is self made."<<endl;
+ }
+
+// parameterized constructor 
+books (string n, string a){
+  cout<<"this is parameterized constructor"<<endl;
+  cout<< "the value of 'this' is "<<this<<endl;
+  this->author = a;
+  this->title = n;
+}
+
+// we can see the value of 'this' in the above constructor. is same as address of b1 obj.
+// this means 'this' work as a pointer to the current object.
+// 'this' keyword is used to store and access the address of the current object.
+
+
+};
+
+int main(){
+
+
+  cout<<"Hii"<<endl;
+  // obj is created statically
+ books b1("Sharmaji", "rajeev"); // here if we dont pass the parameters than this obj will call normal constructor.
+  // if we pass the parameters than this obj will call parameterized constructor.
+  cout<<"the address of b1 is "<<&b1<<endl;
+  b1.show();
+
+  
+  
+ cout<<"byyy"<<endl;
+
+  
+  
+
+
+
+  return 0;
+}
