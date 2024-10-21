@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+class books{
+
+    // here we going to deal with constructor which is inbuilt also onlythis constructor dont ahve any return type , no input type and it invoke during object formation this is called default constructor and this constructor is invisible to the user.
+    // constructor is a special member function with same name as of the class.
+public:
+      string author;
+      int pages;
+       string title; 
+
+
+      string getTitle(){
+        return title;
+
+      }
+
+     void setTitle(string name){
+       title = name;
+     } 
+ books() {   // as this constructor is self made and hence it is called normal constructor with no input parameters and no return type.
+    cout<<"Now this constructor is self made."<<endl;
+ }
+// on creating self constructor, the inbuilt constructor will get die
+};
+
+int main(){
+
+
+  cout<<"Hii"<<endl;
+  // obj is created statically
+ books b1;  // here b1 obj is formed and this will call to default constructor
+  
+ cout<<"byyy"<<endl;
+
+  
+
+
+
+  return 0;
+}
