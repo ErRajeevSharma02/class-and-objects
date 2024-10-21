@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+
+class books{
+
+  private:    
+
+      string title; 
+
+public:
+      string author;
+      int pages;
+
+      string getTitle(){
+        return title;
+
+      }
+
+     void setTitle(string name){
+       title = name;
+     } 
+
+
+};
+
+int main(){
+
+  books book1;  // here i defined an object of class books.
+  cout<<"size of : "<<sizeof(book1)<<endl;   // if there is no property in class then the size of object is 1
+
+  // size of single string is 32 bytes.
+   // book1.title= "harry potter";
+  book1.author= "jk rowling";
+
+  cout<<book1.getTitle()<<endl;
+  cout<<book1.author<<endl;
+  cout<<book1.pages<<endl; // if user not defined the value of any properties then it will print any garbage values and this will print different value for different runs
+
+  book1.pages=512;
+  cout<<book1.pages<<endl;
+
+  book1.setTitle("harry potter");
+  cout<<book1.getTitle()<<endl;
+
+
+
+
+
+  return 0;
+}
