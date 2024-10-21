@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+// to access the class of another file then use #include<nameoffile.cpp>
+
+
+// opps is programming technique, in which the things revolve around the classes and objects for better readability, extensibility and managability.
+
+class books{     // class is a blueprint of an object. and also it is a user defined data type.
+
+  public:    // access modifier, public means that the members of this class can be accessed by any function.
+      
+      // by default the access modifier is private. if it is mentioned
+
+     // below are the properties of class
+      string title;  // here i difined the array of string type. which having length of array is 15 alphabets
+      string author;
+    int pages;
+
+
+
+};
+
+int main(){
+
+  books book1;  // here i defined an object of class books.
+  cout<<"size of : "<<sizeof(book1)<<endl;   // if there is no property in class then the size of object is 1
+
+  // size of single string is 32 bytes.
+   book1.title= "harry potter";
+  book1.author= "jk rowling";
+
+  cout<<book1.title<<endl;
+  cout<<book1.author<<endl;
+  cout<<book1.pages<<endl; // if user not defined the value of any properties then it will print any garbage values and this will print different value for different runs
+
+  book1.pages=512;
+  cout<<book1.pages<<endl;
+
+
+
+
+
+  return 0;
+}
