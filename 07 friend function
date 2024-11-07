@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+class Base{
+    private :
+          int n;
+    public : 
+          string name;
+          int age;
+
+
+    Base(){
+      n = 99;
+    }
+
+   // here we declared the friend class named as Derived;
+    friend class Derived;
+
+};
+
+// Here, class Derived is declared as a
+// friend inside class Base. Therefore,
+// Derived is a friend of class Base. Class Derived
+// can access the private members of
+// class Base.
+
+class Derived{
+    public :
+        void display(Base &b){
+          cout<<"The Name is : "<<b.name<<endl;
+          cout<<"The age is : "<<b.age<<endl;
+          cout<<"The value of N : "<<b.n<<endl;
+        }
+};
+
+
+
+int main(){
+
+  Base a;
+  a.name = "Rajeev";
+  a.age = 22;
+  Derived d;
+  d.display(a);
+
+
+
+  return 0;
+}
